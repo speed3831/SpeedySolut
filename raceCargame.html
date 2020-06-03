@@ -1,0 +1,350 @@
+<html>
+<head>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  #topWall{
+    position:relative;
+    background-image: url('Citything.png');
+    height:300px;
+    left:0px;
+    top:80px;
+    visibility:hidden;
+    background-size:cover;
+    z-index:10;
+    background-position:0px 0px;
+    background-repeat: repeat-x;
+    animation: animate 3s linear infinite;
+  }
+  #farmButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #farmButton:hover {background-color: #3e8e41}
+
+  #farmButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #desertButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #fcdf03;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #desertButton:hover {background-color: #fcba03}
+
+  #desertButton:active {
+    background-color: #fcba03;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #coastButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1f93d1;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #coastButton:hover {background-color: #136794}
+
+  #coastButton:active {
+    background-color: #6e5113
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #forestButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #6e5113;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #forestButton:hover {background-color: #57400f}
+
+  #forestButton:active {
+    background-color: #57400f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #cityButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #616161;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  #cityButton:hover {background-color: #303030}
+
+  #cityButton:active {
+    background-color: #303030;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #hubImage{
+    visibility: visible;
+  }
+  #desertButton{
+    position:absolute;
+    left:190px;
+    top:230px;
+    z-index: 1000000;
+  }
+  #cityButton{
+    position:absolute;
+    left:170px;
+    top:660px;
+  }
+  #forestButton{
+    position:absolute;
+    left:120px;
+    top:520px;
+  }
+  #farmButton{
+    position:absolute;
+    left:130px;
+    top:100px;
+  }#coastButton{
+    position:absolute;
+    left:160px;
+    top:380px;
+  }#raceBackground{
+    position:absolute;
+    left:0px;
+    top:730px;
+  }#road{
+    position:relative;
+    background-image: url('DesertRoad.png');
+    height:154px;
+    left:0px;
+    top:80.5px;
+    visibility:hidden;
+    background-size:cover;
+    z-index:15;
+    background-position:0px 0px;
+    background-repeat: repeat-x;
+    animation: animate 2s linear infinite;
+  }#playerCar{
+    position:absolute;
+    left:0px;
+    transform:translateX(0px);
+    top:1100px;
+    z-index: 900;
+    height:90px
+  }
+
+
+  #oppCar{
+    position:absolute;
+    left:0px;
+    top:1190px;
+    z-index: 900;
+    height:90px
+  }
+  #MustangButton{
+    position:absolute;
+    left:590px;
+    top:270px;
+    z-index:900;
+  }#bmwButton{
+    position:absolute;
+    left:990px;
+    top:270px;
+    z-index:900;
+  }#chevroletButton{
+    position:absolute;
+    left:1390px;
+    top:270px;
+    z-index:900;
+  }#chargerButton{
+    position:absolute;
+    left:590px;
+    top:550px;
+    z-index:900;
+  }#lamboButton{
+    position:absolute;
+    left:990px;
+    top:550px;
+    z-index:900;
+  }#BugattiButton{
+    position:absolute;
+    left:1390px;
+    top:550px;
+    z-index:900;
+  }#imageforquestion{
+    position:absolute;
+    left:15px;
+    top:1275px;
+    z-index:90000000001;
+  }#question{
+    position:absolute;
+    left:520px;
+    top:1275px;
+    z-index:90000000001;
+  }#posAnswer{
+  position:absolute;
+  left:1025px;
+  top:1275px;
+  z-index:90000000001;
+}#questions{
+  position:absolute;
+  left:15px;
+  top:1275px;
+  visibility:visible;
+  z-index:90000000002;
+}#playeranswer{
+  position:absolute;
+  left:1250px;
+  top:1005px;
+  z-index:90000020001;
+  visibility: visible;
+}#introQuestion{
+  position:absolute;
+  left:1120px;
+  top:980px;
+  z-index:100020001;
+  visibility: visible;
+}
+
+@keyframes animate {
+     from{
+       background-position: 0px 0px;
+
+     }
+     to{
+       background-position: -1180px 0px;
+       }
+
+    }#submitButton{
+      position:absolute;
+      left:1420px;
+      top:1002.8;
+      z-index:1900301;
+      visibility: visible;
+    }#endOfRace{
+      position:absolute;
+      left:300px;
+      top:840;
+      z-index:1;
+      visibility: hidden;
+    }#retry{
+      position:absolute;
+      left:600px;
+      top:1090px;
+      z-index:900;
+      visibility:hidden;
+
+    }#nextRace{
+      position:absolute;
+      left:700px;
+      top:1090px;
+      z-index:900;
+      visibility:hidden;
+    }#LockedEgypt{
+      position:absolute;
+      left:-1px;
+      top:160px;
+      z-index:180932490349010123401340091049013904100;
+    }#LockedPlane{
+      position:absolute;
+      left:-1px;
+      top:300px;
+      z-index:180932490349010123401340091049013904100;
+    }#LockedGrowth{
+      position:absolute;
+      left:-1px;
+      top:445px;
+      z-index:180932490349010123401340091049013904100;
+    }#LockedCity{
+      position:absolute;
+      left:-1px;
+      top:590px;
+      z-index:180932490349010123401340091049013904100;
+    }
+
+  </style>
+</head>
+<body>
+
+      <img id="LockedEgypt" src="Locked.png">
+    <img id="LockedPlane" src="Locked.png">
+    <img id="LockedGrowth" src="Locked.png">
+    <img id="LockedCity" src="Locked.png">
+  <input type="button" onClick="retry()" id="retry" value="Retry Race">
+    <input type="button" onClick="nextRace()" id="nextRace" value="Next Race">
+  <input type="button" onClick="desertFunction()" id="desertButton"value="desert"></input>
+  <input type="button" onClick="cityFunction()" id="cityButton" value="city"></input>
+    <input type="button" onClick="forestFunction()" id="forestButton" value="forest"></input>
+  <input type="button" onClick="farmFunction()"id="farmButton" value="farm"></input>
+  <input type="button" onClick="coastFunction()"id="coastButton" value="coast"></input>
+  <input type="button" onClick="mustangSelect()" id="MustangButton" value="Selected">
+  <input type="button" onClick="submit()" id="submitButton" value="Submit">
+    <input type="button" onClick="bMWSelect()" id="bmwButton" value="BMW">
+      <input type="button" onClick="chevroletSelect()" id="chevroletButton" value="Chevrolet">
+        <input type="button" onClick="chargerSelect()" id="chargerButton" value="Dodge Charger">
+          <input type="button" onClick="lamboSelect()" id="lamboButton" value="Lamborghini">
+            <input type="button" onClick="bugattiSelect()" id="BugattiButton" value="Bugatti">
+            <img id="endOfRace" src="FarmVictoryScreen.png">
+<input type="button" id="introQuestion" value="Enter the CAPITAL letter that corresponds to your answer">
+  <input type="text" name="playeranswer" id="playeranswer" >
+  <img src="Hub.png" id="hubImage">
+
+  <img src="DesertBackground.png" id="raceBackground">
+  <img src="Mustang (1).png" id="playerCar">
+  <img src="BMW.png" id="oppCar">
+    <div id="topWall">
+
+  </div>
+  <div id="road">
+  </div>
+<img id="questions" src="PatternsQ1.png" >
+</body>
+</html>
+<script src="raceCarGame.js"></script>
